@@ -1,26 +1,33 @@
 create database projeto;
 use projeto;
-create table Mercado(
-idMercado int primary key,
-NomeMercado varchar(40),
-Endereço varchar(40),
-Bairro varchar(40),
+create table estabelecimento(
+idEstabelecimento int primary key,
+nomeEstabelecimento varchar(40),
+categoria varchar(40),
+cnpj int,
+endereco varchar(50),
 qtdFreezer int
 );
-insert into Mercado values
-(1 ,'Coop','Rua um dois','bairro 1'),
-(2 ,'Da-vó','Rua tres quatro','bairro 2'),
-(3,'Coop','Rua cinco seis','Bairro 3'),
-(4 ,'Extra','Rua sete oito','Bairro 4'),
-(5, 'Extra','Rua nove dez','bairro 5');
 
-create table Freezer(
+create table freezer(
 idFreezer int primary key,
-Tipo varchar(40),
-Tamanho varchar(40),
-Mercado varchar(40),
-bairro varchar(40)
+tipo varchar(40),
+tamanho varchar(40),
+estabelecimento varchar(40)
 );
-insert into Freezer values
-(100, 'Vertical','415 litros','Coop','bairro 1'),
-(101, 'Horizontal','435 litros','Extra','Bairro 4');
+
+create table usuario(
+idUsuario int primary key,
+nome varchar(40),
+email varchar(40),
+senha varchar(40),
+estabelecimento varchar(40)
+);
+
+create table sensor(
+idSensor int primary key,
+temperatura int,
+dataHora datetime
+);
+insert into sensor values
+(1, 5, '2020-09-09 12:19:01');
