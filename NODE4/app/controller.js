@@ -19,7 +19,7 @@ router.get('/', (request, response, next) => {
         data: ArduinoData.List,
         total: ArduinoData.List.length,
         average: isNaN(average) ? 0 : average,
-		dataHour: ArduinoData.ListHour,
+		dataHour: ArduinoData.ListHour.toFixed,
 		totalHour: ArduinoData.ListHour.length,
 		averageHour: isNaN(averageHour) ? 0 : averageHour
     });

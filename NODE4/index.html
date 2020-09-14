@@ -24,13 +24,18 @@
 </head>
 
 <body>
+	<div id="img">
+		<img src="img/logoT.png" alt="">
+	</div>
+	<hr>
 	<section>
 		<h2>Média: <label id='average'>0.00</label></h2>
 		<h2>Média Hora: <label id='averageHour'>0.00</label></h2>
 	</section>
-	<section style="width:50%">
+	<section style="width:100%">
 		<canvas id="chart"></canvas>
 	<section>
+
 	<script>
 
 		var context = document.getElementById("chart").getContext("2d");
@@ -55,18 +60,22 @@
 						distribution: 'series',
                         ticks: {
 							beginAtZero:true,
-							maxticksLimit: 5
-                        }
+							maxticksLimit: 2
+                        },
+						scaleLabel: {
+							display: true,
+							labelString: 'Tempo (Segundos)'
+                        },
 					}],
 					yAxes: [{
 						scaleLabel: {
 							display: true,
-							labelString: 'Temperature'
+							labelString: 'Temperatura'
                         },
                         ticks: {
 							beginAtZero:true,
 							suggestedMin: -10,
-							suggestedMax: 15
+							suggestedMax: 7
                         }
 					}]
 				},
@@ -133,9 +142,18 @@
 			sendTemperature();
 			get_data();
 			// Intervalo de tempo (em milissegundos)
-        }, 10000); 
+        }, 180000); 
 
 	</script>
 </body>
 
 </html>
+
+<style>
+	body{
+		background-color: #F5E1DF;
+	}
+	#img{
+		margin-left: 200px;
+	}
+</style>
