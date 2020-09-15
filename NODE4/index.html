@@ -59,12 +59,14 @@
 						//type: 'value',
 						distribution: 'series',
                         ticks: {
-							beginAtZero:true,
-							maxticksLimit: 2
+							beginAtZero:true, //Sinaliza que a contagem começa no 0
+							maxticksLimit:2 /*quantidade de caracteres que vai aparecer na legenda do eixo x
+											exemplo 2 = 01 / 3= 001 */
+						
                         },
 						scaleLabel: {
 							display: true,
-							labelString: 'Tempo (Segundos)'
+							labelString: 'Tempo (Segundos)' 
                         },
 					}],
 					yAxes: [{
@@ -74,7 +76,7 @@
                         },
                         ticks: {
 							beginAtZero:true,
-							suggestedMin: -10,
+							suggestedMin: -10,  /* min e max que vai aparecer no grafico */
 							suggestedMax: 7
                         }
 					}]
@@ -151,9 +153,11 @@
 
 <style>
 	body{
+		/* Muda a cor de todo background do site */
 		background-color: #F5E1DF;
 	}
 	#img{
+		/* Centraliza a imagem movendo ela da esquerda para direita */
 		margin-left: 200px;
 	}
 </style>
