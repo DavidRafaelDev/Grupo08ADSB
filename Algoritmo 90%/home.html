@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/home.css">
+    <link rel="stylesheet" href="./CSS/menu.css">
+    <title>Frigologia</title>
+</head>
+
+<body>
+
+    <nav class="menu">
+        <img class="logo" src="./Imagens/logoT.png" alt="">
+        <div class="header">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </div>
+        <div class="descricao">
+            <p class="descricao-texto"><span class="titulo">BEM VINDOS A FRIGOLOGIA</span><br>
+                <span class="sobre">Mesclando tecnologia e frigoríficos para
+                    melhor qualidade das carnes</span></p>
+        </div>
+    </nav>
+
+    <div id="#empresa" class="sobrenos">
+        <img class="logoimg" src="./Imagens/logo.png" alt="">
+        <div class="descricao-sobrenos">
+            <h2>SOBRE NÓS</h2><br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero nam hic, nostrum modi
+            dolorum nulla. Enim, commodi in reprehenderit nihil unde illo quas hic natus perspiciatis
+            nemo blanditiis dicta iste? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Illum nulla cupiditate accusamus, dolore, sapiente ad eos, commodi ducimus quas libero
+            dolorum? Sapiente, officia necessitatibus? Aut tempore vitae commodi cumque error!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tempore excepturi
+            doloremque enim harum expedita sed optio iusto aliquid? Quasi corrupti suscipit cum,
+            nobis veniam laudantium repudiandae ex cumque repellendus.
+        </div>
+        <div class="missao-visao-valores">
+            <img class="icon" src="./Imagens/icon-missao.png" alt="">
+            <img class="icon visao" src="./Imagens/icon-visao.png" alt="">
+            <img class="icon valores" src="./Imagens/icon-valores.png" alt="">
+            <div class="missao-descricao">
+                <h3>Missão</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolorem
+                    illum eveniet iure rem quae unde optio facere, suscipit tenetur ipsum
+                    accusamus voluptatibus quidem soluta provident earum dicta similique qui.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                    praesentium obcaecati assumenda dolores, minus deleniti voluptates ratione,
+                    consequatur possimus atque libero adipisci laborum, eos accusamus deserunt
+                    fugit! Non, atque tempore.</p>
+            </div>
+
+            <div class="visao-descricao">
+                <h3>Visão</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolorem
+                    illum eveniet iure rem quae unde optio facere, suscipit tenetur ipsum
+                    accusamus voluptatibus quidem soluta provident earum dicta similique qui.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                    praesentium obcaecati assumenda dolores, minus deleniti voluptates ratione,
+                    consequatur possimus atque libero adipisci laborum, eos accusamus deserunt
+                    fugit! Non, atque tempore.</p>
+            </div>
+
+            <div class="valores-descricao">
+                <h3>Valores</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolorem
+                    illum eveniet iure rem quae unde optio facere, suscipit tenetur ipsum
+                    accusamus voluptatibus quidem soluta provident earum dicta similique qui.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                    praesentium obcaecati assumenda dolores, minus deleniti voluptates ratione,
+                    consequatur possimus atque libero adipisci laborum, eos accusamus deserunt
+                    fugit! Non, atque tempore.</p>
+            </div>
+
+        </div>
+
+        <div class="equipe-responsavel">
+            <h1>Nosso Time</h1>
+            <div class="organizacao-cima">
+                <img class="iniciopadronizacao" src="./Imagens/jose.jpeg" alt="">
+                <img class="iniciopadronizacao" src="./Imagens/david.jpeg" alt="">
+                <img class="iniciopadronizacao" src="./Imagens/renato.jpeg" alt="">
+                <img class="iniciopadronizacao" src="./Imagens/lucas.jpeg" alt="">
+
+                <div class="nome-cima um">José Fabiano</div>
+                <div class="nome-cima dois">David Rafael</div>
+                <div class="nome-cima tres">Renato Paulino</div>
+                <div class="nome-cima quatro">Lucas Ferreira</div>
+            </div>
+
+            <div class="organizacao-baixo">
+                <img class="meiopadronizacao" src="./Imagens/felipe.jpeg" alt="">
+                <img class="meiopadronizacao" src="./Imagens/gabriel.jpeg" alt="">
+                <img class="meiopadronizacao" src="./Imagens/dennis.jpeg" alt="">
+
+                <div class="nome-baixo cinco">Felipe Kling</div>
+                <div class="nome-baixo seis">Gabriel Álvares</div>
+                <div class="nome-baixo sete">Dennis Barbosa</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="simulador-financeiro">
+     <h1>SIMULADOR FINANCEIRO</h1>
+        
+     <center>
+        Valor investido em carnes:<br>
+        <input type="text" placeholder="Valor investido em carnes" id="valora"><br><br>
+        Pedaços de carne perdidos:<br>
+        <input type="number" placeholder="Pedaços perdidos" id="valorb"><br><br>
+        Custo de cada pedaço perdido:<br>
+        <input type="number" placeholder="Custo por pedaço" id="valorc"><br><br>
+
+        <button onclick="calcular()">Calcular</button>
+        <div id="div_conta"></div>
+        </center>
+    </div>
+
+    <div class="footer"><p>Copyright©2020, Frigologia Company Solutions. Todos os direitos reservados. 
+        Todos os textos, imagens, gráficos, animações, vídeos, músicas, sons e outros materiais s
+        ão protegidos por direitos autorais e outros direitos de propriedade intelectual pertencentes 
+        à Frigologia Company Solutions, suas subsidiárias, afiliadas e licenciantes.</p></div>
+
+</body>
+
+</html>
+<script>
+     function calcular() {
+        var a = Number(valora.value);
+        var b = Number(valorb.value);
+        var c = Number(valorc.value);
+
+        div_conta.innerHTML = '';
+        
+        var valorperdas= (b*c);
+        
+        div_conta.innerHTML += `<br>Multiplicando os pedaços perdidos pelo custo por pedaço,
+        você perdeu R$${valorperdas}!`;
+
+        var perdastotais = a-valorperdas;
+
+        div_conta.innerHTML += `<br> Em outras palavras, você investiu realmente R$${perdastotais}.`;
+
+        var porcentagem1= valorperdas*100;
+        var porcentagem2= porcentagem1/a;
+
+        div_conta.innerHTML += `<br>Isto significa que você perdeu ${porcentagem2}% do seu investimento
+        total<br>`;
+
+        var nossaempresa= valorperdas*0.2;
+
+        div_conta.innerHTML += `<br> Você não acha que já perdeu muito por culpa do mal refrigeramento
+        das carnes? <b>Nós achamos.</b><br> Por isso, nós da Frigologia, oferecemos um serviço onde nós 
+        <b><u>GARANTIMOS</u></b> que 80% destas perdas não existirão!<br> O valor que você perderia usando nosso
+        produto, seria: R$${nossaempresa.toFixed(2)}`;
+    }
+
+
+$('nav.menu div.header a').click(function (e) {
+        e.preventDefault();
+        var id = $(this).attr('href'),
+            targetOffset = $(id).offset();
+        $('html, body').animate({
+            scrollTop: targetOffset
+        }, 500);
+    })
+
+
+</script>

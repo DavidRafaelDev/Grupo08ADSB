@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu {
+    background-image: url(../Imagens/background-site.PNG);
+    width: 100%;
+    height: 657px;
+}
+
+.menu img {
+    height: 500px;
+    width: 950px;
+    display: block;
+    margin-left: 220px;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.logo {
+    width: 100%;
+    height: 657px;
+    position: absolute;
+}
+
+.sobrepor {
+    width: 1300px;
+    align-items: center;
+}
+.header {
+    position: absolute;
+}
+
+.header ul li {
+    display: inline-block;
+}
+
+.header ul li a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 10px;
+    text-align: center;
+}
+
+.header ul {
+    float: right;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-right: -1340px;
+    padding: 22px;
+}
+
+.descricao {
+    position: absolute;
+    margin-top: 460px;
+    margin-left: 400px;
+}
+
+.descricao-texto {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #ffffff;
+}
+
+.titulo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.sobre{
+    font-size: 20px;
+}
+
+.logoimg {
+    margin-top: 90px;
+    margin-left: 200px;
+    width: 481px;
+    height: 256px;
+    /* border-radius: 50%; */
+}
+
+.descricao-sobrenos {
+    float: right;
+    width: 500px;
+    text-align: justify;
+    margin-right: 150px;
+    margin-top: 90px;
+}
+
+.icon {
+    height: 100px;
+    width: 100px;
+    margin: 100px 160px 0px 180px;
+}
+
+.missao-descricao {
+    float: left;
+    width: 220px;
+    margin-left: 120px;
+    text-align: justify;
+}
+
+.missao-descricao h3, .visao-descricao h3, .valores-descricao h3 {
+    text-align: center;
+}
+
+.visao-descricao {
+    width: 220px;
+    text-align: justify;
+    margin-left: 220px;
+    display: inline-block;
+}
+
+.valores-descricao {
+    float: right;
+    margin-right: 125px;
+    width: 220px;
+    text-align: justify;
+}
+
+.equipe-responsavel{
+    width: 100%;
+    background-color: lightgray;
+}
+
+.equipe-responsavel h1 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.equipe-responsavel img {
+    height: 320px;
+    width: 260px;
+}
+
+.iniciopadronizacao {
+    margin: 70px 41px 0px 30px;
+}
+
+.meiopadronizacao {
+    margin: 90px 60px 0px 100px;
+}
+
+.nomes-fotos {
+    width: 100px;
+    display: inline-block;
+}
+
+.nome-cima, .nome-baixo{
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.um {
+    margin-left: 130px;
+}
+
+.dois {
+    margin-left: 240px;
+}
+
+.tres {
+    margin-left: 260px;
+}
+
+.quatro {
+    margin-left: 250px;
+}
+
+.cinco {
+    margin-left: 190px;
+}
+
+.seis {
+    margin-left: 350px;
+}
+
+.sete {
+    margin-left: 340px;
+}
+
+.simulador-financeiro {
+    background-color: antiquewhite;
+}
+
+.simulador-financeiro input{
+    text-align: center; 
+}
+
+.simulador-financeiro h1 {
+    text-align: center;
+    padding-top: 70px; 
+    padding-bottom: 30px;
+}
+
+#div_conta {
+    padding-bottom: 100px;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    height: 100px;
+    width: 100%;
+}
+
+.footer p {
+    padding-top: 25px;
+}
