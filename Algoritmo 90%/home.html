@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/home.css">
     <link rel="stylesheet" href="./CSS/menu.css">
     <title>Frigologia</title>
@@ -13,13 +13,14 @@
 
 <body>
 
-    <nav class="menu">
+    <div class="menu">
         <img class="logo" src="./Imagens/logoT.png" alt="">
         <div class="header">
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="login.html">Login</a></li>
-                <li><a href="dashboard/index.html">Dashboard</a></li>
+                <li><a href="produto.html">Produto</a></li>
+                <li><a href="dashboard/index.html">Gráfico</a></li>
             </ul>
         </div>
         <div class="descricao">
@@ -27,7 +28,7 @@
                 <span class="sobre">Mesclando tecnologia e frigoríficos para
                     melhor qualidade das carnes</span></p>
         </div>
-    </nav>
+    </div>
 
     <div id="#empresa" class="sobrenos">
         <img class="logoimg" src="./Imagens/logo.png" alt="">
@@ -111,11 +112,11 @@
      <h1>SIMULADOR FINANCEIRO</h1>
         
      <center>
-        Valor investido em carnes:<br>
+        <span class="pergunta">Valor investido em carnes:</span><br>
         <input type="text" placeholder="Valor investido em carnes" id="valora"><br><br>
-        Pedaços de carne perdidos:<br>
+        <span class="pergunta">Pedaços de carne perdidos:</span><br>
         <input type="number" placeholder="Pedaços perdidos" id="valorb"><br><br>
-        Custo de cada pedaço perdido:<br>
+        <span class="pergunta">Custo de cada pedaço perdido:</span><br>
         <input type="number" placeholder="Custo por pedaço" id="valorc"><br><br>
 
         <button onclick="calcular()">Calcular</button>
@@ -142,16 +143,16 @@
         var valorperdas= (b*c);
         
         div_conta.innerHTML += `<br>Multiplicando os pedaços perdidos pelo custo por pedaço,
-        você perdeu R$${valorperdas}!`;
+        você perdeu <b>R$${valorperdas}</b>!`;
 
         var perdastotais = a-valorperdas;
 
-        div_conta.innerHTML += `<br> Em outras palavras, você investiu realmente R$${perdastotais}.`;
+        div_conta.innerHTML += `<br> Em outras palavras, você investiu realmente <b>R$${perdastotais}.</b>`;
 
         var porcentagem1= valorperdas*100;
         var porcentagem2= porcentagem1/a;
 
-        div_conta.innerHTML += `<br>Isto significa que você perdeu ${porcentagem2}% do seu investimento
+        div_conta.innerHTML += `<br>Isto significa que você perdeu <b>${porcentagem2}%</b> do seu investimento
         total<br>`;
 
         var nossaempresa= valorperdas*0.2;
@@ -159,18 +160,6 @@
         div_conta.innerHTML += `<br> Você não acha que já perdeu muito por culpa do mal refrigeramento
         das carnes? <b>Nós achamos.</b><br> Por isso, nós da Frigologia, oferecemos um serviço onde nós 
         <b><u>GARANTIMOS</u></b> que 80% destas perdas não existirão!<br> O valor que você perderia usando nosso
-        produto, seria: R$${nossaempresa.toFixed(2)}`;
-    }
-
-
-$('nav.menu div.header a').click(function (e) {
-        e.preventDefault();
-        var id = $(this).attr('href'),
-            targetOffset = $(id).offset();
-        $('html, body').animate({
-            scrollTop: targetOffset
-        }, 500);
-    })
-
-
+        produto, seria: <b>R$${nossaempresa.toFixed(2)}</b>`;
+}
 </script>
