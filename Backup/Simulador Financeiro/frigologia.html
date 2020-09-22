@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sprint: Simulador Financeiro</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: antiquewhite;
+        }
+        input {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <img style="height: 200px; width: 300px; border-radius: 10px;" src="logo.png" alt="">
+        <h1>SIMULADOR FINANCEIRO</h1>
+
+        <input id="valora" type="text" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;"
+         placeholder="Valor Investido em Carnes" 
+         style="width: 170px;" maxlength="7"><br>
+        <input id="valorb" type="number" placeholder="Pedaços Perdidos" maxlength="7" /><br>
+        <input id="valorc" type="number" placeholder="Custo por Pedaço" maxlength="7" /><br>
+
+        <button onclick="calcular()">Realizar Simulação</button>
+        <div id="calculo"></div>
+    </center>
+
+</body>
+
+</html>
+<script>
+
+    function name(params) {
+        
+    }
+
+    function calcular() {
+        var a = Number(valora.value); //variável A armazena o valor inserido no campo da primeira input
+        var b = Number(valorb.value); //variável B armazena o valor inserido no campo da segunda input
+        var c = Number(valorc.value); //variável C armazena o valor inserido no campo da terceira input
+
+        calculo.innerHTML = '';
+        
+        var valorperdas= (b*c);
+        
+        calculo.innerHTML += `<br>Multiplicando os pedaços perdidos pelo custo por pedaço,
+        você perdeu R$${valorperdas}!`;
+
+        var perdastotais = a - valorperdas;
+
+        calculo.innerHTML += `<br> Em outras palavras, você investiu realmente R$${perdastotais}.`;
+
+        var porcentagem1= valorperdas*100;
+        var porcentagem2= porcentagem1/a;
+
+        calculo.innerHTML += `<br>Isto significa que você perdeu ${porcentagem2}% do seu investimento
+        total<br>`;
+
+        var nossaempresa= valorperdas*0.2;
+
+        calculo.innerHTML += `<br> Você não acha que já perdeu muito por culpa do mal refrigeramento
+        das carnes? Nós achamos.<br> Por isso, nós da Frigologia, oferecemos um serviço onde nós 
+        <b>GARANTIMOS</b> que 80% destas perdas não existirão!<br> O valor que você perderia usando nosso
+        produto, seria: R$${nossaempresa.toFixed(2)}`;
+    }
+</script>
