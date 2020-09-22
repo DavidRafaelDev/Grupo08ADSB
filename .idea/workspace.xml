@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f65226d-8d72-465d-89b3-f71e82e81d05" name="Default Changelist" comment="" />
+    <list default="true" id="1f65226d-8d72-465d-89b3-f71e82e81d05" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Apresentacao_Frigologia.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Apresentacao_Frigologia.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site Institucional/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site Institucional/dashboard/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1hMruTQWvWj1CpVmWn1gmaiGrCx" />
   <component name="ProjectViewState">
