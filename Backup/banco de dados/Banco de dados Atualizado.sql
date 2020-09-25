@@ -42,15 +42,6 @@ insert into freezer values (001, 'horizontal', 100, 'Swift'),
                            (010,'horizontal',150,'Pão de Açucar');
 select * from freezer;
 
-
-create table sensor (
-idSensor int primary key,
-temperatura varchar (5),
-datahora varchar (20)
-);
-insert into sensor values (000,'5°C', '2020/09/25 12:00');
-
-
 create table usuario(
 idUsuario int primary key,
 nome varchar(40),
