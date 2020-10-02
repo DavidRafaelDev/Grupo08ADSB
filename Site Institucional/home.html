@@ -77,26 +77,32 @@
 
         <div class="equipe-responsavel">
             <h1>NOSSA EQUIPE</h1>
+            <div class="div_select">
+                <select onchange="changeTeam()" id="id_change_team">
+                    <option value="1" selected>Sprint 1</option>
+                    <option value="2">Sprint 2</option>
+                </select>
+            </div>
             <div class="organizacao-cima">
-                <img class="iniciopadronizacao" src="./Imagens/jose.jpeg" alt="">
-                <img class="iniciopadronizacao" src="./Imagens/david.jpeg" alt="">
-                <img class="iniciopadronizacao" src="./Imagens/renato.jpeg" alt="">
-                <img class="iniciopadronizacao" src="./Imagens/lucas.jpeg" alt="">
+                <img class="iniciopadronizacao" id="id_people1" src="./Imagens/jose.jpeg" alt="">
+                <img class="iniciopadronizacao" id="id_people2" src="./Imagens/david.jpeg" alt="">
+                <img class="iniciopadronizacao" id="id_people3" src="./Imagens/renato.jpeg" alt="">
+                <img class="iniciopadronizacao" id="id_people4" src="./Imagens/lucas.jpeg" alt="">
 
-                <div class="nome-cima um"><b>José Fabiano</b></div>
-                <div class="nome-cima dois"><b>David Rafael</b></div>
-                <div class="nome-cima tres"><b>Renato Paulino</b></div>
-                <div class="nome-cima quatro"><b>Lucas Ferreira</b></div>
+                <div class="nome-cima um" id="id_name_people1"><b>José Fabiano</b></div>
+                <div class="nome-cima dois" id="id_name_people2"><b>David Rafael</b></div>
+                <div class="nome-cima tres" id="id_name_people3"><b>Renato Paulino</b></div>
+                <div class="nome-cima quatro" id="id_name_people4"><b>Lucas Ferreira</b></div>
             </div>
 
             <div class="organizacao-baixo">
-                <img class="meiopadronizacao" src="./Imagens/felipe.jpeg" alt="">
-                <img class="meiopadronizacao" src="./Imagens/gabriel.jpeg" alt="">
-                <img class="meiopadronizacao" src="./Imagens/dennis.jpeg" alt="">
+                <img class="meiopadronizacao" id="id_people5" src="./Imagens/felipe.jpeg" alt="">
+                <img class="meiopadronizacao" id="id_people6" src="./Imagens/gabriel.jpeg" alt="">
+                <img class="meiopadronizacao" id="id_people7" src="./Imagens/dennis.jpeg" alt="">
 
-                <div class="nome-baixo cinco"><b>Felipe Kling</b></div>
-                <div class="nome-baixo seis"><b>Gabriel Alvares</b></div>
-                <div class="nome-baixo sete"><b>Dennis Barbosa</b></div>
+                <div class="nome-baixo cinco" id="id_name_people5"><b>Felipe Kling</b></div>
+                <div class="nome-baixo seis" id="id_name_people6"><b>Gabriel Alvares</b></div>
+                <div class="nome-baixo sete" id="id_name_people7"><b>Dennis Barbosa</b></div>
             </div>
         </div>
     </div>
@@ -154,4 +160,121 @@
         temos como <b><u>OBJETIVO</u></b> fazer com que 80% destas perdas não existam!<br> O valor que você 
         perderia usando nosso produto, seria: <b>R$${nossaempresa.toFixed(2)}</b>`;
 }
+
+    function changeTeam() {
+        let numSprint = Number(document.getElementById('id_change_team').value);
+
+        if (numSprint === 1) {
+
+            /*Mudança imagens*/
+
+            id_people1.src = "./Imagens/jose.jpeg";
+            id_people2.src = "./Imagens/david.jpeg";
+            id_people3.src = "./Imagens/renato.jpeg";
+            id_people4.src = "./Imagens/lucas.jpeg";
+            id_people5.src = "./Imagens/felipe.jpeg";
+            id_people6.src = "./Imagens/gabriel.jpeg";
+            id_people7.src = "./Imagens/dennis.jpeg";
+
+            /*Fim mudança imagens*/
+
+            /*Mudança organização*/
+            
+            id_people1.classList.add("iniciopadronizacao");
+            id_people2.classList.add("iniciopadronizacao");
+            id_people3.classList.add("iniciopadronizacao");
+
+            id_people1.classList.remove("meiopadronizacao");
+            id_people2.classList.remove("meiopadronizacao");
+            id_people3.classList.remove("meiopadronizacao");
+
+            id_people4.style.display = 'inline-block';
+            id_name_people4.style.display = 'inline-block';    
+
+            /*Fim mudança organização*/
+
+            /*Mudança Nome*/
+
+            id_name_people1.innerHTML = '<b>José Fabiano</b>';
+            id_name_people1.classList.add("nome-cima");
+            id_name_people1.classList.remove('nome-baixo');
+            id_name_people1.style.marginLeft = '120px';
+
+
+            id_name_people2.innerHTML = '<b>David Rafael</b>';
+            id_name_people2.classList.add("nome-cima");
+            id_name_people2.classList.remove('nome-baixo');
+            id_name_people2.style.marginLeft = '240px';
+
+            id_name_people3.innerHTML = '<b>Renato Paulino</b>';
+            id_name_people3.classList.add("nome-cima");
+            id_name_people3.classList.remove('nome-baixo');    
+            id_name_people3.style.marginLeft = '230px';     
+            
+            // id_name_people4.style.marginLeft = '235px'; 
+
+            id_name_people5.innerHTML = '<b>Felipe Kling</b>';
+            
+            id_name_people6.innerHTML = '<b>Gabriel Alvares</b>';
+
+            id_name_people7.innerHTML = '<b>Dennis Barbosa</b>';
+
+            /*Fim Mudança Nome*/
+
+            // alert(1); teste de entrada
+        } else if (numSprint === 2) {
+
+            /*mudança nas imagens*/
+
+            id_people1.src = "./Imagens/alexandre.png";
+            id_people2.src = "./Imagens/david.jpeg";
+            id_people3.src = "./Imagens/dennis.jpeg";
+            id_people4.src = "./Imagens/felipe.jpeg";
+            id_people5.src = "./Imagens/gabriel.jpeg";
+            id_people6.src = "./Imagens/renato.jpeg";
+
+            /* fim mudanças imagem*/
+
+            /*Mudança organização*/
+            
+            id_people1.classList.remove("iniciopadronizacao");
+            id_people2.classList.remove("iniciopadronizacao");
+            id_people3.classList.remove("iniciopadronizacao");
+
+            id_people1.classList.add("meiopadronizacao");
+            id_people2.classList.add("meiopadronizacao");
+            id_people3.classList.add("meiopadronizacao");
+
+            id_people4.style.display = 'none';
+            id_name_people4.style.display = 'none';
+
+            /*fim mudança organização*/
+
+            /*Mudança nome*/
+
+            id_name_people1.innerHTML = '<b>Alexandre Junior</b>';
+            id_name_people1.classList.remove("nome-cima");
+            id_name_people1.classList.add('nome-baixo');
+            id_name_people1.style.marginLeft = '175px';
+
+
+            id_name_people2.innerHTML = '<b>Arthur Loureano</b>';
+            id_name_people2.classList.remove("nome-cima");
+            id_name_people2.classList.add('nome-baixo');
+            id_name_people2.style.marginLeft = '310px';
+
+            id_name_people3.innerHTML = '<b>Christian Raines</b>';
+            id_name_people3.classList.remove("nome-cima");
+            id_name_people3.classList.add('nome-baixo');    
+            id_name_people3.style.marginLeft = '310px';     
+            
+            id_name_people5.innerHTML = '<b>David Rafael</b>';
+            id_name_people6.innerHTML = '<b>Dennis Barbosa</b>';
+            id_name_people7.innerHTML = '<b>Gabriel Aguiar</b>';
+
+            /*fim mudança nome*/
+            
+            // alert(2); teste de entrada
+        }
+    }
 </script>
