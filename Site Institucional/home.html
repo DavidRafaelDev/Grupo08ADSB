@@ -79,8 +79,8 @@
             <h1>NOSSA EQUIPE</h1>
             <div class="div_select">
                 <select onchange="changeTeam()" id="id_change_team">
-                    <option value="1" selected>Sprint 1</option>
-                    <option value="2">Sprint 2</option>
+                    <option value="1">Sprint 1</option>
+                    <option value="2" selected>Sprint 2</option>
                 </select>
             </div>
             <div class="organizacao-cima">
@@ -131,6 +131,7 @@
 
 </html>
 <script>
+    window.onload = changeTeam();
      function calcular() {
         var a = Number(valora.value);
         var b = Number(valorb.value);
