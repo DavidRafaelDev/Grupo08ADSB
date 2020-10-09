@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+	
+			<div class="form">
+				
+				<h2>Login</h2>
+				<div id="div-img"><img src="imagens/logo.jpg" id="img" alt style="width: 381px;"></div>
+				<form>
+
+				  <input type="text" placeholder="Nome"/>
+				  <input type="password" placeholder="Senha" />
+				  <button onclick="login()" id="inp_login">Login</button>
+				  
+				</form>
+				
+			  </div>			  
+		</div>
+		
+		
+    </body>	
+    
+</html>
+
+<style>
+	
+	/* Aqui para baixa é estilo do formulario */
+	.form{
+		font-family: 'Open Sans Condensed', arial, sans;
+		width: 370px;
+		padding: 30px;
+		background: #fff;
+		margin: 10px auto;
+		
+		/* Sombras do popup */
+		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+		-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+		-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+	}
+	/* Alterando h2 do form */
+	.form h2{
+		background: #333640;
+		text-transform: uppercase;
+		font-family: 'Open Sans Condensed', sans-serif;
+		color: #fff;
+		font-size: 18px;
+		font-weight: 100;
+		padding: 20px;
+		margin: -30px -30px 30px -30px;
+	}
+	/* Estilização dos input do form */
+	.form input{
+		display: inline;
+		width: 98%;
+		padding: 7px;
+		border: none;
+		border-bottom: 1px solid #ddd;
+		margin-bottom: 10px;
+		font: 16px Arial, Helvetica, sans-serif;
+		height: 45px;
+	}
+	/* Redimencionando a img do formulario */
+	#img{
+		height: 300px;
+		width: 400px;
+        margin-top: -30px;
+        margin-right: -30px;
+		
+	}
+	/* Estilo dos botões */
+	
+	#inp_login{
+        width: 350px;
+		background-color: #30838C;
+		display: inline-block;
+		color: #FFFFFF;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-size: 14px;
+		padding: 8px 18px;
+		text-decoration: none;
+		text-transform: uppercase;
+        margin-left: 15px;
+	}
+	/* :houver = ação que se executa ao passar o mouse por cima, nesse caso trocar background */
+	#inp_login:hover{
+		background-color:#34CACA;
+	}
+
+	body {
+        background-color: #8C2B3D;
+    }
+	
+
+</style>	
+<script type="text/javascript">
+	function login(){
+		alert("Login efetuado com sucesso!");
+	}
+</script>
