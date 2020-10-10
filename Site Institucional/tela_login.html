@@ -1,50 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
 </head>
 
 <body>
-	
-			<div class="form">
-				
-				<h2>Login</h2>
-				<div id="div-img"><img src="imagens/logo.jpg" id="img" alt style="width: 381px;"></div>
-				<form>
 
-				  <input type="text" placeholder="Nome"/>
-				  <input type="password" placeholder="Senha" />
-				  <button onclick="login()" id="inp_login">Login</button>
-				  
-				</form>
-				
-			  </div>			  
+	<div id="form" class="form">
+
+		<h2>Login</h2>
+		<div id="div-img"><img src="imagens/logo.jpg" id="img" alt style="width: 381px;"></div>
+		<form>
+
+			<input type="text" placeholder="Nome" />
+			<input type="password" placeholder="Senha" />
+			<button onclick="login()" id="inp_login">Login</button>
+
+		</form>
+		<br>
+		<!--ações para o popup -->
+		<!-- <a href="javascript: abrir();">Cadastro</a><br> -->
+
+		<div class="inp_popup">
+		<button onclick="abrir()" id="inp_cadastro">Crie uma conta!</button>
 		</div>
+		<br>
+	</div>
+
+	<!-- A div popup fica 'invisivel até chamar a ação' -->
+	<div id="popup" class="popup">
+		<div class="form">
+
+			<h2>Cadastro</h2>
+			<div id="div-img"><img src="imagens/logo.jpg" id="img" alt=""></div>
+			<form>
+				<input type="text" placeholder="Nome" />
+				<input type="text" placeholder="Local" />
+				<input type="email" placeholder="Email" />
+				<input type="password" placeholder="Senha" />
+				<input type="password" placeholder="Repetir senha" />
+				<input type="button" onclick="cadastro()" id="cadastrar" value="Cadastrar" />
+				<input type="button" onclick="fechar()" id="cancelar" value="Cancelar" />
+
+			</form>
 		
-		
-    </body>	
-    
+		</div>
+	</div>
+
+
+</body>
+
 </html>
 
 <style>
-	
 	/* Aqui para baixa é estilo do formulario */
-	.form{
+	.form {
 		font-family: 'Open Sans Condensed', arial, sans;
 		width: 370px;
 		padding: 30px;
 		background: #fff;
 		margin: 10px auto;
-		
+
 		/* Sombras do popup */
 		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
 		-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-		-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+		-webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
 	}
+
 	/* Alterando h2 do form */
-	.form h2{
+	.form h2 {
 		background: #333640;
 		text-transform: uppercase;
 		font-family: 'Open Sans Condensed', sans-serif;
@@ -54,8 +81,9 @@
 		padding: 20px;
 		margin: -30px -30px 30px -30px;
 	}
+
 	/* Estilização dos input do form */
-	.form input{
+	.form input {
 		display: inline;
 		width: 98%;
 		padding: 7px;
@@ -65,18 +93,20 @@
 		font: 16px Arial, Helvetica, sans-serif;
 		height: 45px;
 	}
+
 	/* Redimencionando a img do formulario */
-	#img{
+	#img {
 		height: 300px;
 		width: 400px;
-        margin-top: -30px;
-        margin-right: -30px;
-		
+		margin-top: -30px;
+		margin-right: -30px;
+
 	}
+
 	/* Estilo dos botões */
-	
-	#inp_login{
-        width: 350px;
+
+	#inp_login {
+		width: 350px;
 		background-color: #30838C;
 		display: inline-block;
 		color: #FFFFFF;
@@ -85,21 +115,157 @@
 		padding: 8px 18px;
 		text-decoration: none;
 		text-transform: uppercase;
-        margin-left: 15px;
+		margin-left: 15px;
 	}
+	#inp_cadastro{
+		width: 350px;
+		background-color: #8C2B3D;
+		display: inline-block;
+		color: #FFFFFF;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-size: 14px;
+		padding: 8px 18px;
+		text-decoration: none;
+		text-transform: uppercase;
+		margin-left: 15px;
+	}
+
+
 	/* :houver = ação que se executa ao passar o mouse por cima, nesse caso trocar background */
-	#inp_login:hover{
-		background-color:#34CACA;
+	#inp_login:hover {
+		background-color: #34CACA;
+	}
+	#inp_cadastro:hover{
+		background-color: #be3d54;
+;
 	}
 
-	body {
-        background-color: #8C2B3D;
-    }
 	
+	body {
+		background-color: #8C2B3D;
+	}
 
-</style>	
+	.inp_popup{
+		text-align: center;
+		
+	}
+
+	/* CSS do Cadastro */
+
+	/* Especificações do popup */
+	.popup {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: none;
+		opacity: 0;
+		transition: opacity 500ms;
+	}
+
+	/* Aqui para baixa é estilo do formulario */
+	.popup .form {
+		font-family: 'Open Sans Condensed', arial, sans;
+		width: 800px;
+		padding: 30px;
+		background: #fff;
+		margin: 10px auto;
+
+		/* Sombras do popup */
+		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+		-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+		-webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	}
+
+	/* Alterando h2 do form */
+	.popup .form h2 {
+		background: #333640;
+		text-transform: uppercase;
+		font-family: 'Open Sans Condensed', sans-serif;
+		color: #fff;
+		font-size: 18px;
+		font-weight: 100;
+		padding: 20px;
+		margin: -30px -30px 30px -30px;
+	}
+
+	/* Estilização dos input do form */
+	.popup .form input {
+		display: inline;
+		width: 50%;
+		padding: 7px;
+		border: none;
+		border-bottom: 1px solid #ddd;
+		margin-bottom: 10px;
+		font: 16px Arial, Helvetica, sans-serif;
+		height: 45px;
+	}
+
+	/* Redimencionando a img do formulario */
+	.popup .form #div-img #img {
+		height: 300px;
+		width: 400px;
+		float: right;
+	}
+
+	/* Estilo dos botões */
+	.popup .form form #cancelar {
+		background-color: #8C2B3D;
+		display: inline-block;
+		color: #FFFFFF;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-size: 14px;
+		padding: 8px 18px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	.popup .form form #cadastrar {
+		background-color: #30838C;
+		display: inline-block;
+		color: #FFFFFF;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-size: 14px;
+		padding: 8px 18px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	/* :houver = ação que se executa ao passar o mouse por cima, nesse caso trocar background */
+	.popup .form form #cadastrar:hover {
+		background-color: #34CACA;
+	}
+
+	.popup .form form #cancelar:hover {
+		background-color: #be3d54;
+		
+	}
+</style>
 <script type="text/javascript">
-	function login(){
+	function login() {
 		alert("Login efetuado com sucesso!");
+	}
+	// setTimeout ele executa algo depois que o tempo determinado acabar
+	// setTimout = ele pega o id, configura a propriedade style e depois configura a opacidade do style
+	function abrir() {
+		popup.style.display = 'block';
+		form.style.display = 'none';
+		setTimeout(() => {
+			popup.style.opacity = '1';
+			form.style.display = '0';
+		}, 200);
+		
+	}
+	function fechar() {
+		form.style.display = '1';
+		popup.style.opacity = '0';
+		setTimeout(() => {
+			popup.style.display = 'none';
+			form.style.display = 'block';
+		}, 200);
+	}
+	function cadastro() {
+		alert("usuario cadastrado com sucesso !!");
 	}
 </script>
