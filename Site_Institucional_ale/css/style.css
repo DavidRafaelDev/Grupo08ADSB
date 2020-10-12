@@ -35,6 +35,27 @@ div.container {
     border-radius: 7px;
     color: #fff;
 }
+
+.btn-reverse {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+.btn-reverse:hover {
+    border-radius: 7px;
+    color: #fff;
+}
+
 /* End Global */
 
 
@@ -268,28 +289,124 @@ section.team div.container div.details-team img {
 /* Footer */
 
 footer {
-    background-color: aqua;
+    padding-top: 50px;
+    color: #fff;
+    background-color: #962d3e;
 }
 
 footer div.container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
-    background-color: aquamarine;
 }
 
 footer div.container div.information {
     width: 350px;
-    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+}
+
+footer div.container form h3,
+footer div.container div.information h3  {
+    width: 100%;
+    font-weight: 400;
+}
+
+footer div.container div.information p {
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
 footer div.container form {
     width: 50%;
-    background-color:teal;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-footer div.container form {
-
+footer div.container form div {
+    width: 49.5%;
+    margin-top: 7px;
+    display: flex;
 }
 
+footer div.container form div:nth-child(4) {
+    width: 100%;
+}
+
+footer div.container form div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer div.container form div input {
+    width: 100%;
+    height: 30px;
+    display: block;
+    margin-top: 3px;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: none;
+    background-color: #f8f8ff;
+}
+
+footer div.container form div textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 3px;
+    padding-left: 10px;
+    padding-top: 5px;
+    resize: none;
+    border-radius: 3px;
+    border: none;
+    background-color: #f8f8ff;
+}
+
+footer div.container form div button {
+    align-self: flex-end;
+}
+
+footer .copyright {
+    width: 100%;
+    height: 50px;
+}
 /* End Footer */
+
+
+
+/* MOBILE */
+
+
+
+@media only screen and (max-width: 900px) {
+    
+    /* Start */
+    section.start div.container img {
+        width: 50%;
+    }
+    /* Fim Start */
+
+    /* About */
+    section.about div.container div.logo-and-history img {
+        margin-bottom: 15px;
+    }
+
+    section.about div.container div.values-of-work div.details-values:last-child {
+        margin-top: 20px;
+    }
+    /* Fim About */
+
+
+    /* footer */
+    footer div.container form {
+        margin-top: 25px;
+        width: 100%;
+    }
+
+    footer div.container form div button {
+        margin-bottom: 15px;
+    }
+    /* Fim footer */
+}

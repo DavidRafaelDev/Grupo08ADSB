@@ -29,10 +29,7 @@
                         <a href="#team">Equipe</a>
                     </li>
                     <li>
-                        <a href="">Simulador</a>
-                    </li>
-                    <li>
-                        <a href="">Sistema </a>
+                        <a href="#footer">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -141,7 +138,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="footer">
         <div class="container">
             <div class="information">
                 <h3>Frigologia</h3>
@@ -150,18 +147,40 @@
             <form>
                 <h3>Entre em Contato!</h3>
                 <div>
-                    <label for="id_name">Insira seu nome:</label>
-                    <input type="text" id="id_name">
+                    <!-- <label for="id_name">Insira seu nome:</label> -->
+                    <input 
+                        type="text" 
+                        id="id_name" 
+                        autocapitalize="sentences"
+                        placeholder="Insira seu nome:"
+                    />
                 </div>
                 <div>
-                    <label for="id_email">Insira seu E-mail:</label>
-                    <input type="email" id="id_email">
+                    <!-- <label for="id_email">Insira seu e-mail:</label> -->
+                    <input 
+                        type="email" 
+                        id="id_email"  
+                        autocapitalize="none"
+                        placeholder="Insira seu e-mail:"
+                    />
                 </div>
                 <div>
-                    <label for="id_msg">Digite sua dúvida ou sujestão:</label>
-                    <textarea id="id_msg" cols="1" rows="5" ></textarea>
+                    <!-- <label for="id_msg">Digite sua dúvida ou sujestão:</label> -->
+                    <textarea 
+                        id="id_msg" 
+                        cols="1" 
+                        rows="5"  
+                        autocapitalize="sentences"
+                        placeholder="Insira sua dúvida ou sugestão:"
+                    ></textarea>
+                </div>
+                <div>
+                    <button class="btn-reverse">Enviar</button>
                 </div>
             </form>
+            <div class="copyright">
+                <h5>© Frigologia todos os direitos reservados.</h5>
+            </div>
         </div>
     </footer>
 </body>
