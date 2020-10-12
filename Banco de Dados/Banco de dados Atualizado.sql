@@ -5,8 +5,7 @@ idEstabelecimento int primary key,
 nomeEstabelecimento varchar(40),
 categoria varchar(40),
 cnpj char (18),
-endereco varchar(100),
-qtdFreezer int
+endereco varchar(100)
 );
 insert into estabelecimento values (001, 'Extra', 'Supermercado', '04.039.570/0001-46', 'R. Samuel Klabin 193 Vila Leopoldina São Paulo  SP 05077-015',15),
 								   (002, 'Carrefour', 'Supermercado', '75.666.798/0001-04', 'Shopping Tamboré, Av. Piracema, 669 - Tamboré, Barueri - SP 06460-030', 20),
@@ -28,7 +27,9 @@ create table freezer(
 idFreezer int primary key,
 tipo varchar(40),
 tamanho varchar(40),
-estabelecimento varchar(40)
+estabelecimento varchar(40),
+fkEstabelecimentoFreezer int,
+foreign key (fkEstabelecimentoFreezer) references estabelecimento(idEstabelecimento)
 );
 insert into freezer values (001, 'horizontal', 100, 'Swift'),
 						   (002, 'vertical', 70, 'extra'),
@@ -42,11 +43,12 @@ insert into freezer values (001, 'horizontal', 100, 'Swift'),
                            (010,'horizontal',150,'Pão de Açucar');
 select * from freezer;
 
-
 create table sensor (
 idSensor int primary key,
 temperatura varchar (5),
-datahora varchar (20)
+datahora varchar (20),
+fkFreezer int,
+foreign key (fkFreezer) references freezer(idFreezer)
 );
 insert into sensor values (000,'5°C', '2020/09/25 12:00');
 
@@ -56,7 +58,8 @@ idUsuario int primary key,
 nome varchar(40),
 email varchar(40),
 senha varchar(40),
-estabelecimento varchar(40)
+fkEstabelecimentoUsuario int,
+foreign key (fkEstabelecimentoUsuario) references estabelecimento(idEstabelecimento)
 );
 insert into usuario values (001, 'Renato Paulino', 'renato.paulino@bandtec.com.br', 'qualquercoisa', 'Extra'),
 						   (002, 'Lucas Ferreira', 'lucas.ferreira@bandtec.com.br', 'qualquercoisa1', 'Carrefour'),
