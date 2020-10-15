@@ -1,5 +1,5 @@
 function login() {
-    window.location.href="index.html";
+    window.location.href="dashboard/index.html";
 }
 // setTimeout ele executa algo depois que o tempo determinado acabar
 // setTimout = ele pega o id, configura a propriedade style e depois configura a opacidade do style
