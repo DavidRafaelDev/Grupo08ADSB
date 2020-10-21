@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">    
+    <title>Produto</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="name-logo">
+                <img src="img/frigologo.png" alt="Logo">
+                <h1>Frigologia</h1>
+            </div>
+            <div class="header-nav">
+                <ul>
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="#product">Produto</a>
+                    </li>
+                    <li>
+                        <a href="#team">Equipe</a>
+                    </li>
+                    <li>
+                        <a href="#footer">Contato</a>
+                    </li>
+                    <li>
+                        <a href="tela_login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="container">
+        <div id="logo">
+            <img id="imgLogo" src="logo-frigologia.jpeg" alt="">
+        </div>
+            <div id="textoInicio">
+                <p>
+                    frigologia - O conceito de mesclar tecnologia de ponta com o universo das carnes 
+                    ou frigorífico, o que for melhor. O pensamento criativo nos move em nossas soluções, 
+                    a eficiência nos norteia em nossa trajetória e a qualidade é o nosso objetivo, com esses
+                    valores em nossas veias seremos melhores hoje do que fomos ontem e claro, pensando 
+                    sempre em que podemos melhorar amanhã, tudo para garantirmos aos nossos parceiros uma 
+                    experiência única, diferenciada e que supere as expectativas - inclusive as nossas próprias.
+                    Somos inquietos, acreditamos que sempre é possível fazer mais e melhor e unindo conhecimento
+                    ixão nossa meta é nos tornarmos referência nacional em controle de refrigeração para o mercado
+                    frigorífico varejista.
+                </p>
+            </div>
+        </div>
+        <div id="solucao">
+            <img id="imgDesenho" src="desenho.png" alt="">
+        </div>
+        <div id="lm35">
+            <div id="h1"><h1>O melhor sensor para o melhor serviço !</h1></div>
+            <div id="lm35Texto">
+                <p>
+                    O Sensor de Temperatura LM35 é um sensor de precisão, que apresenta uma saída de tensão 
+                    linear relativa à temperatura em que ele se encontrar no momento em que for alimentado 
+                    por uma tensão e em sua saída um sinal variável de 10mV para cada grau celsius de 
+                    temperatura.
+                </p>
+                <img id="lm35Img" src="lm35.png" alt="">
+            </div>
+            <div id="lm35Lista">  
+                <ul>
+                    <li>
+                        Temperatura de trabalho em range completo: -55 a +150º C
+                    </li>
+                    <li>
+                        Escala Linear: + 10.0 mV/˚C
+                    </li>
+                    <li>
+                        Auta presisão 
+                    </li>
+                    <li>
+                        Baixa impedância de saída
+                    </li>
+                    <li>
+                        Precisã: 0,5ºC
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="calfundo1">
+            <div class="calfundo2">
+                <img class="logo2" src="img/frigologo.png" alt="Logo">
+                <h3 class="titulo">Simulador financeiro</h3>
+            </div>
+            <div class="simulador-financeiro">
+    
+                    <b class="pergunta">Valor investido em carnes:</b><br>
+                    <input class="input" type="text" placeholder="Valor investido em carnes" id="valora"><br><br>
+                    <b class="pergunta">Quantidade de quilogramas(Kg) perdidos:</b><br>
+                    <input class="input" type="number" placeholder="Quilogramas perdidos" id="valorb"><br><br>
+                    <b class="pergunta">Custo por quilograma(Kg) perdido:</b><br>
+                    <input class="input" type="number" placeholder="Custo por quilogramas" id="valorc"><br><br>
+        
+                    <button class="btn" onclick="calcular()">Calcular</button>
+        
+            </div>
+    
+            <div class="resultado" id="div_conta"></div>
+        </div>
+    
+    
+        
+    
+        <footer id="footer">
+            <div class="container">
+                <div class="information">
+                    <h3>Frigologia</h3>
+                    <p>Mesclando tecnologia e frigoríficos para melhor qualidade das carnes.</p>
+                </div>
+    
+                <form>
+                    <h3>Entre em Contato!</h3>
+                    <div>
+                        <!-- <label for="id_name">Insira seu nome:</label> -->
+                        <input type="text" id="id_name" autocapitalize="sentences" placeholder="Insira seu nome:" />
+                    </div>
+                    <div>
+                        <!-- <label for="id_email">Insira seu e-mail:</label> -->
+                        <input type="email" id="id_email" autocapitalize="none" placeholder="Insira seu e-mail:" />
+                    </div>
+                    <div>
+                        <!-- <label for="id_msg">Digite sua dúvida ou sujestão:</label> -->
+                        <textarea id="id_msg" cols="1" rows="5" autocapitalize="sentences"
+                            placeholder="Insira sua dúvida ou sugestão:"></textarea>
+                    </div>
+                    <div>
+                        <button class="btn-reverse">Enviar</button>
+                    </div>
+                </form>
+                <div class="copyright">
+                    <h5>© Frigologia todos os direitos reservados.</h5>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
+<style>
+    body{
+        background-color: lightgray;;
+    }
+    #menu{
+        background-color:brown;
+        height: 20px;
+    }
+    #container{
+        background-color:white;
+        height:370px;
+    }
+
+    #textoInicio{
+        margin-top:100px;
+        padding-top: 20px;
+        height: auto;
+        width:400px;
+        margin-left: 150px;
+    }
+    #logo{
+        float:right;
+        margin-right:60px;
+    }
+    #solucao{
+        margin-top:100px;
+        background-color: white;
+        height: 600px;        
+    }
+    #lm35{
+        margin-top:220px;
+        background-color: white;
+        height: 600px;
+    }
+    #imgLogo{
+        width: 350px;
+
+    }
+    #imgDesenho{
+        width:90%;
+        margin-left: 50px;
+        margin-top:100px;
+    }
+    #lm35Texto{
+        width:30%;
+        float:right;
+        margin-right: 100px;
+    }
+    #lm35Lista li{
+        border: 1px solid black;
+        width:400px;
+        height: 40px;
+        text-align: center;
+        margin-top:10px;
+        list-style-type: none;
+    }   
+    #lm35Img{
+        height:210px;
+        margin-left: 50px;
+    }
+    #h1{
+        text-align:center;
+    }
+</style>
+<script>
+    
+    window.onload = changeTeam();
+    function calcular() {
+        var a = Number(valora.value);
+        var b = Number(valorb.value);
+        var c = Number(valorc.value);
+
+        div_conta.innerHTML = '';
+
+        var valorperdas = (b * c);
+
+        div_conta.innerHTML += `<br>Multiplicando os pedaços perdidos pelo custo por quilograma,
+        você perdeu <b>R$${valorperdas}</b>!`;
+
+        var perdastotais = a - valorperdas;
+
+        div_conta.innerHTML += `<br> Em outras palavras, você investiu realmente <b>R$${perdastotais}.</b>`;
+
+        var porcentagem1 = valorperdas * 100;
+        var porcentagem2 = porcentagem1 / a;
+
+        div_conta.innerHTML += `<br>Isto significa que você perdeu <b>${porcentagem2.toFixed(2)}%</b> do seu investimento
+        total<br>`;
+
+        var nossaempresa = valorperdas * 0.2;
+
+        div_conta.innerHTML += `<br> Você não acha que já perdeu muito por culpa do mau refrigeramento
+        das carnes? <b>Nós acreditamos que sim!</b><br> Por isso, nós da Frigologia, oferecemos um serviço onde 
+        temos como <b><u>OBJETIVO</u></b> fazer com que 80% destas perdas não existam!<br> O valor que você 
+        perderia usando nosso produto, seria: <b>R$${nossaempresa.toFixed(2)}</b>`;
+    }
+
+
+</script>

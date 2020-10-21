@@ -6,7 +6,7 @@
 // Function do sensores de temepratura lm35
 function lm35(min, max) {
     // Range min/max do sensor
-    min = typeof min == 'undefined' ? -10 : min; 
+    min = typeof min == 'undefined' ? 0 : min; 
     max = typeof max == 'undefined' ? 7 : max;
     
     // Cria variavel random e diz que ela vai retornar um numero random entre o range
