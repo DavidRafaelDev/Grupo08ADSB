@@ -1,0 +1,62 @@
+body{
+    background-color: lightgray;;
+}
+#menu{
+    background-color:brown;
+    height: 20px;
+}
+#container{
+    background-color:white;
+    height:370px;
+}
+
+#textoInicio{
+    margin-top:100px;
+    padding-top: 20px;
+    height: auto;
+    width:400px;
+    margin-left: 150px;
+}
+#logo{
+    float:right;
+    margin-right:60px;
+}
+#solucao{
+    margin-top:100px;
+    background-color: white;
+    height: 600px;        
+}
+#lm35{
+    margin-top:220px;
+    background-color: white;
+    height: 600px;
+}
+#imgLogo{
+    width: 350px;
+
+}
+#imgDesenho{
+    width:90%;
+    margin-left: 50px;
+    margin-top:100px;
+}
+#lm35Texto{
+    width:30%;
+    float:right;
+    margin-right: 100px;
+}
+#lm35Lista li{
+    border: 1px solid black;
+    width:400px;
+    height: 40px;
+    text-align: center;
+    margin-top:10px;
+    list-style-type: none;
+}   
+#lm35Img{
+    height:210px;
+    margin-left: 50px;
+}
+#h1{
+    text-align:center;
+}
