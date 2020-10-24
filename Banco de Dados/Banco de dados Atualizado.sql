@@ -3,12 +3,24 @@ use Frigologia;
 
 create table tbDados (
 idDados int primary key,
-temp int,
+temp varchar(5),
 dia date,
 hora time,
 fkSensor int,
 foreign key (fkSensor) references tbSensor (idSensor)
 );
+
+insert into tbDados values (1,'0°C','2020-10-01','20:00:00',1),
+						   (2,'6°C','2020-05-05','05:30:00',2),
+                           (3,'-1°C','2020-09-08','01:00:00',3),
+                           (4,'4°C','2020-10-02','15:00:00',4),
+                           (5,'2°C','2020-02-15','06:00:00',5),
+                           (6,'5°C','2020-09-04','19:30:00',6),
+                           (7,'0°C','2020-08-08','20:30:00',7),
+                           (8,'1°C','2020-05-09','07:00:00',8),
+                           (9,'4°C','2020-04-08','21:00:00',9),
+                           (10,'-3°C','2020-10-24','23:30:00',10);
+                           
 
 create table tbSensor (
 idSensor int primary key,
@@ -16,9 +28,16 @@ fkFreezer int,
 foreign key (fkFreezer) references tbFreezer (idFreezer)
 );
 
-insert into tbSensor values (1,1);
-
-
+insert into tbSensor values (1,1),
+							(2,2),
+							(3,3),
+                            (4,4),
+                            (5,5),
+                            (6,6),
+							(7,7),
+                            (8,8),
+                            (9,9),
+                            (10,10);
 
 create table tbFreezer(
 idFreezer int primary key,
