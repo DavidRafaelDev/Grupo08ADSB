@@ -1,6 +1,15 @@
 function login() {
-    window.location.href="dashboard/index.html";
+
+    if (usuario.value == 'frigologia@gmail.com' && senha.value == 'frigologia') {
+        window.location.href = "dashboard/index.html";
+
+    } else {
+        alert("Senha ou usuário incorreto!");
+
+    }
+
 }
+
 // setTimeout ele executa algo depois que o tempo determinado acabar
 // setTimout = ele pega o id, configura a propriedade style e depois configura a opacidade do style
 function abrir() {
@@ -10,7 +19,7 @@ function abrir() {
         popup.style.opacity = '1';
         form.style.display = '0';
     }, 200);
-    
+
 }
 function fechar() {
     form.style.display = '1';
