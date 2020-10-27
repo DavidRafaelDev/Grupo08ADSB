@@ -38,7 +38,7 @@ header div.container div.logo img {
 }
 
 header div.container nav {
-    width: 120px;
+    width: 140px;
     /* background-color: coral; */
 }
 
@@ -206,7 +206,7 @@ section.dashboard div.container div.div_status div.icon_status {
     align-items: center;
     margin-bottom: 10px;
     border-radius: 50%;
-    background-color: gray;
+    background-color: rgba(58, 11, 11, 0.15);
 }
 
 section.dashboard div.container div.div_status div.icon_status img {
