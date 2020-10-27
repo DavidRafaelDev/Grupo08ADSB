@@ -1,12 +1,13 @@
 
+
 #container{
-    background-color:white;
     height:370px;
+   
 }
 
 #textoInicio{
     margin-top:180px;
-    padding-top: 20px;
+    padding-top: 20px; 
     height: auto;
     width:400px;
     margin-left: 150px;
@@ -51,7 +52,16 @@
     height:210px;
     margin-left: 50px;
 }
+
 #h1{
     text-align:center;
     padding-bottom: 50px;
+    margin-left: -10px;
+    font-size: 24px;
+    font-weight: 500;
+    
 }
+
+/* Section styles */
+
+
